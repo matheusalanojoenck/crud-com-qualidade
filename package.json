@@ -4,14 +4,19 @@
   "description": "Código desenvolvidos durante o curso \"CRUD com qualidade\"",
   "main": "index.js",
   "scripts": {
-    "start": "node ./core/crud.js",
-    "dev": "nodemon ./core/crud.js",
+    "start:crud": "npx ts-node ./core/crud.ts",
+    "dev:crud": "nodemon --ext ts,tsx --exec 'npm run start:crud'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.14.9",
+    "i": "^0.3.7",
     "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "typescript": "^5.5.2"
   }
 }
