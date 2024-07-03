@@ -23,6 +23,12 @@
       "@ui/*": [
         "src/ui/*"
       ],
+      "@bd-crud-todo": [
+        "core/crud.ts"
+      ],
+      "@server/*": [
+        "src/server/*"
+      ]
     }
   },
   "include": [

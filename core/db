@@ -1,14 +1,14 @@
 {
   "todos": [
     {
-      "id": "eca72a95-7b8e-4022-8d8b-6dfb6671ba4d",
-      "date": "2024-06-28T18:51:39.641Z",
+      "id": "e363cec4-97b5-422b-8b08-60b1ca4cd643",
+      "date": "2024-07-03T13:45:41.974Z",
       "content": "Primeira TODO",
       "done": false
     },
     {
-      "id": "a502a2d3-5cb8-4a53-9113-08feb16a87f7",
-      "date": "2024-06-28T18:51:39.642Z",
+      "id": "46d6c2b2-53e5-422f-b4a1-4079d189a12d",
+      "date": "2024-07-03T13:45:41.977Z",
       "content": "Atualizada!",
       "done": false
     }
