@@ -119,6 +119,9 @@ deleteById(secondTodo.id);
 const thirdTodo = create("Terceira TODO");
 const extraTodo = create("Extra TODO");
 deleteById(extraTodo.id);
+create("Academia");
+create("Estudar");
+create("Limpar a casa");
 // update(thirdTodo.id, {
 //   content: "Atualizada!",
 //   done: true,
