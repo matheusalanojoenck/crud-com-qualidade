@@ -16,13 +16,13 @@ function get({
     limit,
 }: TodoRepositoryGetParams = {}): TodoRepositoryGetOutput {
     const currentPage = page || 1;
-    const curretLimit = limit || 2;
+    const currentLimit = limit || 2;
     const ALL_TODOS = read();
 
-    const startIndex = (currentPage - 1) * curretLimit;
-    const endIndex = currentPage * curretLimit;
+    const startIndex = (currentPage - 1) * currentLimit;
+    const endIndex = currentPage * currentLimit;
     const paginatedTodos = ALL_TODOS.slice(startIndex, endIndex);
-    const totalPages = Math.ceil(ALL_TODOS.length / curretLimit);
+    const totalPages = Math.ceil(ALL_TODOS.length / currentLimit);
 
     return {
         total: ALL_TODOS.length,
