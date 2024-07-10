@@ -10,7 +10,7 @@ interface HomeTodo {
     content: string;
 }
 function HomePage() {
-    const [initialLoadComplete, setInitialLoadComplete] = React.useState(false);
+    const initialLoadComplete = React.useRef(false);
     const [totalPages, setTotalPages] = React.useState(0);
     const [page, setPage] = React.useState(1);
     const [search, setSearch] = React.useState("");
@@ -23,11 +23,8 @@ function HomePage() {
     const hasMorePages = totalPages > page;
     const hasNoTodos = homeTodos.length === 0 && !isLoading;
 
-    //console.log("totalPages", totalPages);
-
     React.useEffect(() => {
-        setInitialLoadComplete(true);
-        if (!initialLoadComplete) {
+        if (!initialLoadComplete.current) {
             todoController
                 .get({ page })
                 .then(({ todos, pages }) => {
@@ -35,7 +32,7 @@ function HomePage() {
                     setTotalPages(pages);
                 })
                 .finally(() => {
-                    setIsLoading(false);
+                    initialLoadComplete.current = true;
                 });
         }
     }, []);
