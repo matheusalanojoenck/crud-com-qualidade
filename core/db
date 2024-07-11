@@ -1,32 +1,20 @@
 {
   "todos": [
     {
-      "id": "a5d68246-3a45-4021-83a9-96cdf9e30fca",
-      "date": "2024-07-11T13:49:56.702Z",
-      "content": "Primeira TODO",
-      "done": false
-    },
-    {
-      "id": "172749db-25e1-472a-945c-4e1c2cb2e641",
-      "date": "2024-07-11T13:49:56.704Z",
-      "content": "Atualizada!",
-      "done": false
-    },
-    {
-      "id": "f6452550-48c2-437e-a43a-bd9b3ad66772",
-      "date": "2024-07-11T13:49:56.706Z",
+      "id": "4c30ddeb-e262-4b94-b469-7d57074839c3",
+      "date": "2024-07-11T19:07:49.805Z",
       "content": "Academia",
       "done": false
     },
     {
-      "id": "9df2fe30-b723-43b4-b662-e5670542b4a7",
-      "date": "2024-07-11T13:49:56.707Z",
+      "id": "a47273dc-4174-4ff4-9f5b-f10f1097e601",
+      "date": "2024-07-11T19:07:49.806Z",
       "content": "Estudar",
       "done": false
     },
     {
-      "id": "7616bd18-c191-47d7-a36f-13ac1318f3be",
-      "date": "2024-07-11T13:49:56.708Z",
+      "id": "538a5295-9fb5-477a-a34b-d2d6c5c5f4f5",
+      "date": "2024-07-11T19:07:49.806Z",
       "content": "Limpar a casa",
       "done": false
     }
