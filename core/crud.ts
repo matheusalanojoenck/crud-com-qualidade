@@ -112,6 +112,7 @@ export function CLEAR_DB() {
 }
 
 // [SIMULATION]
+
 /* CLEAR_DB();
 create("Primeira TODO");
 const secondTodo = create("Segunda TODO");
