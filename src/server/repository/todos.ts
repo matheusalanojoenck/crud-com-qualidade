@@ -6,6 +6,12 @@ import {
 } from "@bd-crud-todo";
 import { HttpNotFoundError } from "@server/infra/erros";
 
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://tyyiodefjmibjbwpaeuc.supabase.co'
+const supabaseKey = process.env.SUPABASE_SECRET_KEY || ""
+const supabase = createClient(supabaseUrl, supabaseKey)
+
 interface TodoRepositoryGetParams {
     page?: number;
     limit?: number;
@@ -17,11 +23,22 @@ interface TodoRepositoryGetOutput {
     pages: number;
 }
 
-function get({
+async function get({
     page,
     limit,
-}: TodoRepositoryGetParams = {}): TodoRepositoryGetOutput {
-    const currentPage = page || 1;
+}: TodoRepositoryGetParams = {}): Promise<TodoRepositoryGetOutput> {
+    const { data, count } = await supabase.from("todos").select("*", {
+        count: "exact",
+    });
+    const todos = data as Todo[];
+    const total = count || todos.length;
+
+    return {
+        todos,
+        total,
+        pages: 1,
+    }
+/*     const currentPage = page || 1;
     const currentLimit = limit || 2;
     const ALL_TODOS = read().reverse();
 
@@ -35,6 +52,7 @@ function get({
         todos: paginatedTodos,
         pages: totalPages,
     };
+ */
 }
 
 async function createByContent(content: string): Promise<Todo> {
