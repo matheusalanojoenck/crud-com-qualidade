@@ -34,6 +34,12 @@ module.exports = {
     },
     ignorePatterns: ["node_modules/", "_explicacoes/"],
     rules: {
+        "prettier/prettier": [
+            "error",
+            {
+                endOfLine: "auto",
+            },
+        ],
         "no-only-tests/no-only-tests": "error",
         "react/no-unknown-property": ["error", { ignore: ["jsx", "global"] }],
     },
