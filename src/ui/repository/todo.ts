@@ -19,6 +19,7 @@ function get({
         async (respostaDoServidor) => {
             const todosString = await respostaDoServidor.text();
             // Como garantir a tipagem de tipos desconhecidos?
+            console.log("todosString", todosString);
             const responseParsed = parseTodosFromServer(
                 JSON.parse(todosString)
             );
